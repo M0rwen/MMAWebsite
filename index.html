@@ -6,35 +6,45 @@
     <title>MMA Website</title>
     <style>
         body {
-            font-family: 'Times New Roman', serif;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
         }
         nav {
-            background-color: #333;
-            padding: 10px;
+            background-color: #1a1a1a;
+            padding: 15px;
             text-align: center;
+            border-bottom: 2px solid #ff6b35;
         }
         nav label {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 0 5px;
-            background-color: #555;
-            color: #fff;
+            padding: 12px 25px;
+            margin: 0 10px;
+            background-color: #333;
+            color: #e0e0e0;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
+            border: 1px solid #ff6b35;
+            transition: background-color 0.3s;
+        }
+        nav label:hover {
+            background-color: #ff6b35;
+            color: #000;
         }
         nav input[type="radio"] {
             display: none;
         }
         nav input[type="radio"]:checked + label {
-            background-color: #777;
+            background-color: #ff6b35;
+            color: #000;
         }
         .tab-content {
             display: none;
-            padding: 20px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         #home:checked ~ #home-content,
         #solar:checked ~ #solar-content,
@@ -42,10 +52,33 @@
             display: block;
         }
         h1, h2 {
-            color: #ccc;
+            color: #ff6b35;
+            text-align: center;
         }
         p {
             line-height: 1.6;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ff6b35;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e55a2b;
+        }
+        .disclaimer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
@@ -60,9 +93,17 @@
     </nav>
 
     <div id="home-content" class="tab-content">
-        <h1>Welcome to MMA Website</h1>
-        <p>This is the home page of the MMA Website. Here you can find information about various topics including the solar system and rotoscoping techniques.</p>
-        <p>Explore the tabs above to learn more.</p>
+        <h1>Welcome to this Website</h1>
+        <p>Explore our collection of 3D models and animations created in Blender.</p>
+        <h2>Blender 3D Solar System</h2>
+        <p>Discover an interactive 3D model of the solar system, featuring planets orbiting the sun with accurate scales and animations.</p>
+        <a href="#" onclick="document.getElementById('solar').checked=true;" class="button">View Solar System</a>
+        <h2>Rotoscoping</h2>
+        <p>Learn about rotoscoping techniques used in animation, with examples and tutorials on how to apply this method in Blender.</p>
+        <a href="#" onclick="document.getElementById('roto').checked=true;" class="button">View Rotoscoping</a>
+        <div class="disclaimer">
+            This website is made by Yunice Jam Matabile, A.Y 2025-2026, of Technological University of the Philippines-Taguig Campus.
+        </div>
     </div>
 
     <div id="solar-content" class="tab-content">
