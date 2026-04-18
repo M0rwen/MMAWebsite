@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMA Website</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav label {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        nav input[type="radio"] {
+            display: none;
+        }
+        nav input[type="radio"]:checked + label {
+            background-color: #777;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        #home:checked ~ #home-content,
+        #solar:checked ~ #solar-content,
+        #roto:checked ~ #roto-content {
+            display: block;
+        }
+        h1, h2 {
+            color: #ccc;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="radio" id="home" name="tab" checked>
+        <label for="home">Home</label>
+        <input type="radio" id="solar" name="tab">
+        <label for="solar">Solar System</label>
+        <input type="radio" id="roto" name="tab">
+        <label for="roto">Rotoscoping</label>
+    </nav>
+
+    <div id="home-content" class="tab-content">
+        <h1>Welcome to MMA Website</h1>
+        <p>This is the home page of the MMA Website. Here you can find information about various topics including the solar system and rotoscoping techniques.</p>
+        <p>Explore the tabs above to learn more.</p>
+    </div>
+
+    <div id="solar-content" class="tab-content">
+        <h1>Solar System</h1>
+        <p>The solar system consists of the Sun and the objects that orbit it, including planets, dwarf planets, moons, asteroids, and comets.</p>
+        <h2>Planets</h2>
+        <ul>
+            <li>Mercury</li>
+            <li>Venus</li>
+            <li>Earth</li>
+            <li>Mars</li>
+            <li>Jupiter</li>
+            <li>Saturn</li>
+            <li>Uranus</li>
+            <li>Neptune</li>
+        </ul>
+    </div>
+
+    <div id="roto-content" class="tab-content">
+        <h1>Rotoscoping</h1>
+        <p>Rotoscoping is an animation technique that involves tracing over live-action footage frame by frame to create realistic animation.</p>
+        <p>It was pioneered by Max Fleischer in the 1910s and has been used in various films and animations.</p>
+    </div>
+</body>
+</html>
