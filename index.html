@@ -236,6 +236,19 @@
             border: none;
             border-radius: 10px;
         }
+        .planet-button {
+            background: none;
+            border: none;
+            color: #e0e0e0;
+            cursor: pointer;
+            padding: 0;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        .planet-button:hover {
+            color: #ff0000;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -282,6 +295,7 @@
             
             <h2>Planets</h2>
             <ul>
+                <li><button class="planet-button" onclick="toggleSun()">Sun</button></li>
                 <li>Mercury</li>
                 <li>Venus</li>
                 <li>Earth</li>
@@ -292,14 +306,16 @@
                 <li>Neptune</li>
             </ul>
             
-            <h2>Sun</h2>
-            <p>The Sun is the most massive object in our solar system and contains about 99.86% of all the mass in the entire solar system. It is a giant ball of hot plasma held together by its own gravity. The Sun is primarily composed of hydrogen and helium, which undergo nuclear fusion in its core, converting mass into the tremendous energy that powers the entire solar system.</p>
-            <p>Our Sun is approximately 4.6 billion years old and is roughly halfway through its life cycle. Every second, the Sun converts about 600 million tons of hydrogen into helium through nuclear fusion, releasing vast amounts of energy that travels to Earth as light, heat, and radiation.</p>
-            <div style="max-width: 700px; margin: 30px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3); border: 2px solid rgba(255, 0, 0, 0.4);">
-                <video width="100%" height="auto" controls style="display: block;">
-                    <source src="videos/sunrealtime0001-0120.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div id="sun-content" style="display: none;">
+                <h2>Sun</h2>
+                <p>The Sun is the most massive object in our solar system and contains about 99.86% of all the mass in the entire solar system. It is a giant ball of hot plasma held together by its own gravity. The Sun is primarily composed of hydrogen and helium, which undergo nuclear fusion in its core, converting mass into the tremendous energy that powers the entire solar system.</p>
+                <p>Our Sun is approximately 4.6 billion years old and is roughly halfway through its life cycle. Every second, the Sun converts about 600 million tons of hydrogen into helium through nuclear fusion, releasing vast amounts of energy that travels to Earth as light, heat, and radiation.</p>
+                <div style="max-width: 700px; margin: 30px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3); border: 2px solid rgba(255, 0, 0, 0.4);">
+                    <video width="100%" height="auto" controls style="display: block;">
+                        <source src="videos/sunrealtime0001-0120.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
 
@@ -367,6 +383,15 @@
             
             // Add active class to clicked button
             document.querySelector('[data-tab="' + tabName + '"]').classList.add('active');
+        }
+        
+        function toggleSun() {
+            const sunContent = document.getElementById('sun-content');
+            if (sunContent.style.display === 'none') {
+                sunContent.style.display = 'block';
+            } else {
+                sunContent.style.display = 'none';
+            }
         }
         
         // Add click listeners to navigation buttons
