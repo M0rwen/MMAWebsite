@@ -26,8 +26,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.05) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
@@ -38,10 +38,10 @@
             width: 220px;
             background: rgba(26, 26, 46, 0.95);
             backdrop-filter: blur(10px);
-            border: 2px solid #ff6b35;
+            border: 2px solid #ff0000;
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
             z-index: 100;
             display: flex;
             flex-direction: column;
@@ -51,7 +51,7 @@
             padding: 12px 16px;
             background: linear-gradient(135deg, rgba(51, 51, 51, 0.8) 0%, rgba(68, 68, 88, 0.8) 100%);
             color: #e0e0e0;
-            border: 1px solid rgba(255, 107, 53, 0.5);
+            border: 1px solid rgba(255, 0, 0, 0.5);
             cursor: pointer;
             border-radius: 8px;
             font-size: 14px;
@@ -74,20 +74,20 @@
             transition: left 0.5s;
         }
         nav button:hover {
-            background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
             color: #000;
-            border-color: #ff6b35;
+            border-color: #ff0000;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
         }
         nav button:hover::before {
             left: 100%;
         }
         nav button.active {
-            background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
             color: #000;
-            border-color: #ff9966;
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            border-color: #ff6666;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
             font-weight: 600;
         }
         .container {
@@ -116,10 +116,10 @@
             }
         }
         h1, h2 {
-            color: #ff6b35;
+            color: #ff0000;
             text-align: center;
             margin: 20px 0;
-            text-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            text-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
             letter-spacing: 2px;
         }
         h1 {
@@ -134,10 +134,10 @@
             line-height: 1.8;
             text-align: center;
             margin: 15px 0;
-            background: rgba(255, 107, 53, 0.05);
+            background: rgba(255, 0, 0, 0.05);
             padding: 15px;
             border-radius: 8px;
-            border-left: 3px solid #ff6b35;
+            border-left: 3px solid #ff0000;
         }
         ul {
             text-align: center;
@@ -150,23 +150,23 @@
         ul li {
             margin: 5px 0;
             padding: 15px;
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.05) 100%);
-            border: 1px solid rgba(255, 107, 53, 0.3);
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(255, 0, 0, 0.05) 100%);
+            border: 1px solid rgba(255, 0, 0, 0.3);
             border-radius: 8px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         ul li:hover {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(255, 107, 53, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.2) 0%, rgba(255, 0, 0, 0.1) 100%);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
-            border-color: #ff6b35;
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+            border-color: #ff0000;
         }
         .button {
             display: inline-block;
             padding: 12px 30px;
             margin: 15px 10px;
-            background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
             color: #000;
             text-decoration: none;
             border-radius: 50px;
@@ -177,7 +177,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -195,7 +195,7 @@
         }
         .button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
             border-color: rgba(255, 255, 255, 0.3);
         }
         .button:hover::before {
@@ -211,9 +211,9 @@
             color: #888;
             margin-top: 60px;
             padding: 20px;
-            border-top: 2px solid rgba(255, 107, 53, 0.3);
+            border-top: 2px solid rgba(255, 0, 0, 0.3);
             border-radius: 8px;
-            background: rgba(255, 107, 53, 0.05);
+            background: rgba(255, 0, 0, 0.05);
         }
         .video-container {
             position: relative;
@@ -224,8 +224,8 @@
             height: 0;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.3);
-            border: 2px solid rgba(255, 107, 53, 0.4);
+            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3);
+            border: 2px solid rgba(255, 0, 0, 0.4);
         }
         .video-container iframe {
             position: absolute;
@@ -267,6 +267,19 @@
         <div id="solar" class="tab-content">
             <h1>Solar System</h1>
             <p>The solar system consists of the Sun and the objects that orbit it, including planets, dwarf planets, moons, asteroids, and comets.</p>
+            
+            <h2>Age Calculator</h2>
+            <p>Enter your age in Earth years to see how old you would be on other planets!</p>
+            <div style="text-align: center; margin: 20px 0;">
+                <input type="number" id="earthYears" placeholder="Enter Earth years" style="padding: 10px; border: 1px solid #00d4ff; border-radius: 5px; background: rgba(0,0,0,0.5); color: #e0e0e0; font-size: 16px;">
+                <button class="button" onclick="calculateAges()">Calculate</button>
+            </div>
+            <div id="results" style="display: none;">
+                <h2>Your Age on Other Planets</h2>
+                <ul id="ageList">
+                </ul>
+            </div>
+            
             <h2>Planets</h2>
             <ul>
                 <li>Mercury</li>
@@ -287,12 +300,44 @@
             
             <h2>Reference Video</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/XA3L-PDr4Gw" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                <iframe src="https://www.youtube.com/embed/tuD2wTFNRjo" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </div>
 
     <script>
+        function calculateAges() {
+            const earthYears = parseFloat(document.getElementById('earthYears').value);
+            if (isNaN(earthYears) || earthYears <= 0) {
+                alert('Please enter a valid positive number for Earth years.');
+                return;
+            }
+            
+            const planets = {
+                'Mercury': 0.241,
+                'Venus': 0.615,
+                'Earth': 1,
+                'Mars': 1.881,
+                'Jupiter': 11.862,
+                'Saturn': 29.457,
+                'Uranus': 84.011,
+                'Neptune': 164.8
+            };
+            
+            const resultsDiv = document.getElementById('results');
+            const ageList = document.getElementById('ageList');
+            ageList.innerHTML = '';
+            
+            for (const [planet, period] of Object.entries(planets)) {
+                const age = (earthYears / period).toFixed(2);
+                const li = document.createElement('li');
+                li.textContent = `${planet}: ${age} years`;
+                ageList.appendChild(li);
+            }
+            
+            resultsDiv.style.display = 'block';
+        }
+        
         function switchTab(tabName) {
             // Hide all tab contents
             const tabs = document.querySelectorAll('.tab-content');
