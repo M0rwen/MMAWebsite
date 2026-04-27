@@ -11,48 +11,66 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Courier New', monospace;
             background-color: #000000;
             color: #ffffff;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
         }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(0, 255, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
         nav {
             position: fixed;
             left: 20px;
             top: 20px;
-            width: 220px;
-            background-color: #000000;
-            border: 2px solid #b22234;
+            width: 240px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 2px solid #00ffff;
             border-radius: 0;
             padding: 20px;
             z-index: 100;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
         }
         nav button {
             padding: 12px 16px;
-            background-color: #000000;
-            color: #ffffff;
-            border: 1px solid #b22234;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #00ffff;
+            border: 1px solid #00ffff;
             cursor: pointer;
             border-radius: 0;
             font-size: 14px;
             font-weight: 500;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px #00ffff;
         }
         nav button:hover {
-            background-color: #b22234;
-            color: #ffffff;
+            background-color: #00ffff;
+            color: #000000;
+            box-shadow: 0 0 15px #00ffff;
         }
         nav button.active {
-            background-color: #b22234;
-            color: #ffffff;
-            border-color: #ffffff;
+            background-color: #00ffff;
+            color: #000000;
+            border-color: #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
         }
         .container {
             padding: 40px;
@@ -80,28 +98,31 @@
             }
         }
         h1, h2 {
-            color: #ff0000;
+            color: #00ffff;
             text-align: center;
             margin: 20px 0;
-            text-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+            letter-spacing: 3px;
+            font-weight: bold;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 30px;
+            text-transform: uppercase;
         }
         h2 {
-            font-size: 1.8em;
-            margin-top: 30px;
+            font-size: 2em;
+            margin-top: 40px;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
         }
         p {
-            line-height: 1.8;
+            line-height: 1.6;
             text-align: center;
             margin: 15px 0;
-            background: rgba(255, 0, 0, 0.05);
             padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid #ff0000;
+            color: #e0e0e0;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
         }
         ul {
             text-align: center;
@@ -130,54 +151,38 @@
             display: inline-block;
             padding: 12px 30px;
             margin: 15px 10px;
-            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-            color: #000;
+            background-color: rgba(0, 255, 255, 0.1);
+            color: #00ffff;
             text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 2px solid transparent;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            border: 2px solid #00ffff;
             cursor: pointer;
             font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        .button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
         }
         .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-        .button:hover::before {
-            width: 300px;
-            height: 300px;
+            background-color: #00ffff;
+            color: #000000;
+            box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
         }
         .button:active {
             transform: translateY(-1px);
         }
         .disclaimer {
             text-align: center;
-            font-size: 0.85em;
-            color: #888;
+            font-size: 0.9em;
+            color: #00ff00;
             margin-top: 60px;
             padding: 20px;
-            border-top: 2px solid rgba(255, 0, 0, 0.3);
-            border-radius: 8px;
-            background: rgba(255, 0, 0, 0.05);
+            border-top: 2px solid #00ff00;
+            border-radius: 0;
+            background-color: rgba(0, 255, 0, 0.05);
+            text-shadow: 0 0 5px #00ff00;
         }
         .video-container {
             position: relative;
@@ -210,8 +215,9 @@
             transition: all 0.3s ease;
         }
         .planet-button:hover {
-            color: #ff0000;
+            color: #00ffff;
             font-weight: bold;
+            text-shadow: 0 0 5px #00ffff;
         }
     </style>
 </head>
@@ -225,19 +231,23 @@
     <div class="container">
         <div id="home" class="tab-content active">
             <h1>Yunice's Portfolio</h1>
-            <p>This website showcases 3D models and animations created using Blender, providing educational content on solar system simulations and rotoscoping techniques.</p>
-            <p>Explore our collection of 3D models and animations created in Blender.</p>
-            
+            <p>Welcome to my digital portfolio. I am Yunice Jam Matabile, a digital artist and animator specializing in 3D modeling and visual effects using Blender.</p>
+            <p>This portfolio showcases my work in creating immersive 3D environments, solar system simulations, and advanced animation techniques including rotoscoping.</p>
+
+            <h2>Featured Projects</h2>
+            <p>Explore my collection of 3D models and animations that demonstrate technical proficiency in digital art and computer graphics.</p>
+
             <h2>Blender 3D Solar System</h2>
-            <p>Discover an interactive 3D model of the solar system, featuring planets orbiting the sun with accurate scales and animations.</p>
-            <button class="button" onclick="switchTab('solar')">View Solar System</button>
-            
-            <h2>Rotoscoping</h2>
-            <p>Learn about rotoscoping techniques used in animation, with examples and tutorials on how to apply this method in Blender.</p>
-            <button class="button" onclick="switchTab('roto')">View Rotoscoping</button>
-            
+            <p>An interactive 3D simulation of our solar system with accurate planetary orbits, scales, and real-time animations.</p>
+            <button class="button" onclick="switchTab('solar')">EXPLORE SOLAR SYSTEM</button>
+
+            <h2>Rotoscoping Techniques</h2>
+            <p>Advanced rotoscoping demonstrations and tutorials showcasing traditional animation techniques in modern digital workflows.</p>
+            <button class="button" onclick="switchTab('roto')">VIEW ROTOSCOPING</button>
+
             <div class="disclaimer">
-                This website is made by Yunice Jam Matabile, A.Y 2025-2026, of Technological University of the Philippines-Taguig Campus.
+                <strong>DISCLAIMER:</strong> All content on this website, including videos, images, and references used for educational purposes, belong to their respective rightful owners. This portfolio is created for demonstration and educational purposes only. No copyright infringement is intended.<br><br>
+                Created by Yunice Jam Matabile | A.Y. 2025-2026 | Technological University of the Philippines - Taguig Campus
             </div>
         </div>
 
@@ -248,7 +258,7 @@
             <h2>Age Calculator</h2>
             <p>Enter your age in Earth years to see how old you would be on other planets!</p>
             <div style="text-align: center; margin: 20px 0;">
-                <input type="number" id="earthYears" placeholder="Enter Earth years" style="padding: 10px; border: 1px solid #00d4ff; border-radius: 5px; background: rgba(0,0,0,0.5); color: #e0e0e0; font-size: 16px;">
+                <input type="number" id="earthYears" placeholder="Enter Earth years" style="padding: 10px; border: 2px solid #00ffff; border-radius: 0; background-color: rgba(0, 0, 0, 0.8); color: #00ffff; font-size: 16px; font-family: 'Courier New', monospace; text-shadow: 0 0 5px #00ffff; box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);">
                 <button class="button" onclick="calculateAges()">Calculate</button>
             </div>
             <div id="results" style="display: none;">
