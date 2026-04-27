@@ -257,8 +257,8 @@
             
             <h2>Planets</h2>
             <ul>
-                <li><span class="planet-button" onclick="toggleMercury()" style="cursor: pointer; color: #7aaadb;">Mercury</span></li>
-                <li><span class="planet-button" onclick="toggleVenus()" style="cursor: pointer; color: #7aaadb;">Venus</span></li>
+                <li><span class="planet-button" style="cursor: pointer; color: #7aaadb;">Mercury</span></li>
+                <li><span class="planet-button" style="cursor: pointer; color: #7aaadb;">Venus</span></li>
                 <li>Earth</li>
                 <li>Mars</li>
                 <li>Jupiter</li>
@@ -268,7 +268,7 @@
             </ul>
             
             <div id="mercury-content" style="display: none; animation: fadeIn 0.5s ease-in-out;">
-                <h2 style="cursor: pointer; text-align: left; color: #7aaadb; transition: all 0.3s ease;" onclick="toggleMercury()">☿ Mercury</h2>
+                <h2 class="planet-header" style="cursor: pointer; text-align: left; color: #7aaadb; transition: all 0.3s ease;">☿ Mercury</h2>
                 <p>Mercury is the smallest planet in our solar system and the closest to the Sun. It is named after the Roman messenger god due to its swift movement across the sky. Mercury has a thin atmosphere and extreme temperature variations, with the day side reaching 430°C (800°F) while the night side drops to -180°C (-290°F).</p>
                 <p>Despite being the closest planet to the Sun, Mercury is not the hottest—Venus holds that distinction. Mercury has a heavily cratered surface, similar to our Moon, and rotates very slowly. Interestingly, Mercury's day is longer than its year! It takes 59 Earth days to rotate once on its axis, but only 88 Earth days to orbit the Sun.</p>
                 <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
@@ -280,7 +280,7 @@
             </div>
 
             <div id="venus-content" style="display: none; animation: fadeIn 0.5s ease-in-out;">
-                <h2 style="cursor: pointer; text-align: left; color: #7aaadb; transition: all 0.3s ease;" onclick="toggleVenus()">♀ Venus</h2>
+                <h2 class="planet-header" style="cursor: pointer; text-align: left; color: #7aaadb; transition: all 0.3s ease;">♀ Venus</h2>
                 <p>Venus is the second planet from the Sun and is often called Earth's "sister planet" due to their similar sizes and masses. However, Venus is a harsh and inhospitable world. It has the hottest surface of any planet in our solar system, with temperatures reaching 465°C (869°F), hot enough to melt lead.</p>
                 <p>Venus has a thick atmosphere composed primarily of carbon dioxide with clouds of sulfuric acid, creating a runaway greenhouse effect. The atmospheric pressure on Venus is 92 times greater than on Earth, equivalent to being 3,000 meters deep in the ocean. Uniquely, Venus rotates backwards (retrograde rotation) and rotates so slowly that its day is longer than its year. It is the only planet that rotates from east to west when viewed from above the North Pole.</p>
                 <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
@@ -291,7 +291,7 @@
                 </div>
             </div>
             
-            <h2 style="cursor: pointer; text-align: left; color: #ffa500; transition: all 0.3s ease;" onclick="toggleSun()">☀ Sun ☀</h2>
+            <h2 class="planet-header" style="cursor: pointer; text-align: left; color: #ffa500; transition: all 0.3s ease;">☀ Sun ☀</h2>
             
             <div id="sun-content" style="display: none; animation: fadeIn 0.5s ease-in-out;">
                 <p>The Sun is the most massive object in our solar system and contains about 99.86% of all the mass in the entire solar system. It is a giant ball of hot plasma held together by its own gravity. The Sun is primarily composed of hydrogen and helium, which undergo nuclear fusion in its core, converting mass into the tremendous energy that powers the entire solar system.</p>
@@ -402,6 +402,32 @@
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', function() {
                 switchTab(this.dataset.tab);
+            });
+        });
+        
+        // Add click listeners to planet buttons
+        document.querySelectorAll('.planet-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const planet = this.textContent.toLowerCase();
+                if (planet === 'mercury') {
+                    toggleMercury();
+                } else if (planet === 'venus') {
+                    toggleVenus();
+                }
+            });
+        });
+        
+        // Add click listeners to planet headers
+        document.querySelectorAll('.planet-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const text = this.textContent.toLowerCase();
+                if (text.includes('mercury')) {
+                    toggleMercury();
+                } else if (text.includes('venus')) {
+                    toggleVenus();
+                } else if (text.includes('sun')) {
+                    toggleSun();
+                }
             });
         });
     </script>
