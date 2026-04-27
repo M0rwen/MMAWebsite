@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMA Website</title>
+    <title>Yunice's Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -11,37 +11,22 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            color: #e0e0e0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
         }
         nav {
             position: fixed;
             left: 20px;
             top: 20px;
             width: 220px;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(10px);
-            border: 2px solid #ff0000;
-            border-radius: 15px;
+            background-color: #000000;
+            border: 2px solid #b22234;
+            border-radius: 0;
             padding: 20px;
-            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
             z-index: 100;
             display: flex;
             flex-direction: column;
@@ -49,46 +34,25 @@
         }
         nav button {
             padding: 12px 16px;
-            background: linear-gradient(135deg, rgba(51, 51, 51, 0.8) 0%, rgba(68, 68, 88, 0.8) 100%);
-            color: #e0e0e0;
-            border: 1px solid rgba(255, 0, 0, 0.5);
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #b22234;
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 0;
             font-size: 14px;
             font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: background-color 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        nav button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
-            transition: left 0.5s;
         }
         nav button:hover {
-            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-            color: #000;
-            border-color: #ff0000;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
-        }
-        nav button:hover::before {
-            left: 100%;
+            background-color: #b22234;
+            color: #ffffff;
         }
         nav button.active {
-            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-            color: #000;
-            border-color: #ff6666;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-            font-weight: 600;
+            background-color: #b22234;
+            color: #ffffff;
+            border-color: #ffffff;
         }
         .container {
             padding: 40px;
@@ -260,7 +224,7 @@
 
     <div class="container">
         <div id="home" class="tab-content active">
-            <h1>Welcome to this Website</h1>
+            <h1>Yunice's Portfolio</h1>
             <p>This website showcases 3D models and animations created using Blender, providing educational content on solar system simulations and rotoscoping techniques.</p>
             <p>Explore our collection of 3D models and animations created in Blender.</p>
             
