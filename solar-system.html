@@ -18,10 +18,8 @@
         }
         body {
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(-45deg, #000000, #1a3a5c, #2a4a7c, #1f3a5a);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            color: #e8e8e8;
+            background: #000000;
+            color: #FFDEDE;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -31,46 +29,46 @@
             left: 20px;
             top: 20px;
             width: 240px;
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.15) 0%, rgba(115, 158, 201, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.12) 0%, rgba(255, 11, 85, 0.1) 100%);
             backdrop-filter: blur(20px);
-            border: 2px solid rgba(115, 158, 201, 0.4);
+            border: 2px solid rgba(255, 11, 85, 0.5);
             border-radius: 16px;
             padding: 20px;
             z-index: 100;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 40px rgba(86, 130, 177, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 222, 222, 0.08), 0 0 40px rgba(255, 11, 85, 0.2);
         }
         nav a {
             padding: 12px 16px;
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.2) 0%, rgba(115, 158, 201, 0.15) 100%);
-            color: #FFE8DB;
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.2) 0%, rgba(255, 11, 85, 0.15) 100%);
+            color: #FFDEDE;
             text-decoration: none;
-            border: 1.5px solid rgba(115, 158, 201, 0.3);
+            border: 1.5px solid rgba(255, 11, 85, 0.4);
             border-radius: 10px;
             font-size: 13px;
             font-weight: 600;
             transition: all 0.4s ease;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            box-shadow: 0 4px 12px rgba(86, 130, 177, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(255, 11, 85, 0.2), inset 0 1px 0 rgba(255, 222, 222, 0.1);
             text-align: center;
         }
 
         nav a:hover {
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.5) 0%, rgba(115, 158, 201, 0.4) 100%);
-            color: #FFE8DB;
-            border-color: rgba(255, 232, 219, 0.5);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.5) 0%, rgba(255, 11, 85, 0.4) 100%);
+            color: #FFDEDE;
+            border-color: rgba(255, 11, 85, 0.8);
             transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(86, 130, 177, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 232, 219, 0.2);
+            box-shadow: 0 12px 24px rgba(255, 11, 85, 0.4), inset 0 1px 0 rgba(255, 222, 222, 0.2), 0 0 20px rgba(255, 11, 85, 0.3);
         }
 
         nav a.active {
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.6) 0%, rgba(115, 158, 201, 0.5) 100%);
-            color: #FFE8DB;
-            border-color: rgba(255, 232, 219, 0.6);
-            box-shadow: 0 10px 28px rgba(86, 130, 177, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 232, 219, 0.25);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.7) 0%, rgba(255, 11, 85, 0.6) 100%);
+            color: #FFDEDE;
+            border-color: rgba(255, 11, 85, 0.9);
+            box-shadow: 0 10px 28px rgba(255, 11, 85, 0.5), inset 0 1px 0 rgba(255, 222, 222, 0.2), 0 0 25px rgba(255, 11, 85, 0.35);
         }
         .container {
             margin-left: 280px;
@@ -80,33 +78,33 @@
         h1 {
             font-size: 2.8em;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #739EC9 0%, #FFE8DB 50%, #5682B1 100%);
+            background: linear-gradient(135deg, #FF0B55 0%, #FFDEDE 50%, #CF0F47 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 700;
-            text-shadow: 0 0 30px rgba(115, 158, 201, 0.3);
+            text-shadow: 0 0 30px rgba(255, 11, 85, 0.4);
         }
 
         h2 {
             font-size: 1.9em;
             margin: 40px 0 20px 0;
-            color: #FFE8DB;
+            color: #FFDEDE;
             font-weight: 700;
-            text-shadow: 0 2px 8px rgba(86, 130, 177, 0.3);
+            text-shadow: 0 2px 8px rgba(255, 11, 85, 0.3);
         }
 
         p {
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #d0d0d0;
+            color: #FFDEDE;
             font-size: 15px;
         }
         .button {
             padding: 12px 24px;
-            background: linear-gradient(135deg, #5682B1 0%, #739EC9 100%);
-            color: #FFE8DB;
-            border: 2px solid #FFE8DB;
+            background: linear-gradient(135deg, #CF0F47 0%, #FF0B55 100%);
+            color: #FFDEDE;
+            border: 2px solid #FFDEDE;
             border-radius: 8px;
             cursor: pointer;
             font-size: 14px;
@@ -114,12 +112,12 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 20px rgba(86, 130, 177, 0.3), inset 0 1px 0 rgba(255, 232, 219, 0.2), 0 0 15px rgba(255, 232, 219, 0.15);
+            box-shadow: 0 8px 20px rgba(255, 11, 85, 0.4), inset 0 1px 0 rgba(255, 222, 222, 0.2), 0 0 15px rgba(255, 11, 85, 0.2);
         }
 
         .button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(86, 130, 177, 0.4), inset 0 1px 0 rgba(255, 232, 219, 0.3), 0 0 20px rgba(255, 232, 219, 0.2);
+            box-shadow: 0 12px 28px rgba(255, 11, 85, 0.5), inset 0 1px 0 rgba(255, 222, 222, 0.3), 0 0 20px rgba(255, 11, 85, 0.3);
         }
 
         .button:active {
@@ -128,15 +126,15 @@
         .disclaimer {
             text-align: left;
             font-size: 0.85em;
-            color: #b0b0b0;
+            color: #FFDEDE;
             margin-top: 80px;
             padding: 24px;
-            border-top: 2px solid rgba(115, 158, 201, 0.5);
-            border-left: 5px solid #739EC9;
+            border-top: 2px solid rgba(255, 11, 85, 0.5);
+            border-left: 5px solid #FF0B55;
             border-radius: 10px;
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.1) 0%, rgba(115, 158, 201, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);
             line-height: 1.7;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 232, 219, 0.1), 0 0 15px rgba(86, 130, 177, 0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 222, 222, 0.1), 0 0 15px rgba(255, 11, 85, 0.15);
         }
         .video-container {
             position: relative;
@@ -145,9 +143,9 @@
             margin: 40px 0;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(86, 130, 177, 0.15);
-            border: 2px solid rgba(115, 158, 201, 0.3);
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.1) 0%, rgba(115, 158, 201, 0.08) 100%);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 11, 85, 0.2);
+            border: 2px solid rgba(255, 11, 85, 0.35);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);
         }
 
         .video-container iframe {
@@ -157,10 +155,10 @@
         }
         input[type="number"] {
             padding: 10px 12px;
-            border: 2px solid rgba(115, 158, 201, 0.4);
+            border: 2px solid rgba(255, 11, 85, 0.4);
             border-radius: 8px;
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.1) 0%, rgba(115, 158, 201, 0.08) 100%);
-            color: #FFE8DB;
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);
+            color: #FFDEDE;
             font-size: 14px;
             width: 200px;
             margin-right: 10px;
@@ -169,16 +167,16 @@
 
         input[type="number"]:focus {
             outline: none;
-            border-color: #739EC9;
-            box-shadow: 0 0 0 3px rgba(115, 158, 201, 0.2), inset 0 1px 0 rgba(255, 232, 219, 0.1);
+            border-color: #FF0B55;
+            box-shadow: 0 0 0 3px rgba(255, 11, 85, 0.2), inset 0 1px 0 rgba(255, 222, 222, 0.1);
         }
         #results {
             margin-top: 20px;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(86, 130, 177, 0.1) 0%, rgba(115, 158, 201, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);
             border-radius: 10px;
-            border: 2px solid rgba(115, 158, 201, 0.3);
-            box-shadow: 0 8px 20px rgba(86, 130, 177, 0.2), inset 0 1px 0 rgba(255, 232, 219, 0.1);
+            border: 2px solid rgba(255, 11, 85, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 11, 85, 0.25), inset 0 1px 0 rgba(255, 222, 222, 0.1);
         }
 
         #results ul {
@@ -188,8 +186,8 @@
 
         #results li {
             padding: 10px 0;
-            border-bottom: 1px solid rgba(115, 158, 201, 0.2);
-            color: #d0d0d0;
+            border-bottom: 1px solid rgba(255, 11, 85, 0.2);
+            color: #FFDEDE;
         }
 
         #results li:last-child {
@@ -220,7 +218,7 @@
             </ul>
         </div>
 
-        <h2>☀ Sun ☀</h2>
+        <h2>Sun</h2>
         <p>The Sun is the most massive object in our solar system and contains about 99.86% of all the mass in the entire solar system. It is a giant ball of hot plasma held together by its own gravity. The Sun is primarily composed of hydrogen and helium, which undergo nuclear fusion in its core, converting mass into the tremendous energy that powers the entire solar system.</p>
         <p>Our Sun is approximately 4.6 billion years old and is roughly halfway through its life cycle. Every second, the Sun converts about 600 million tons of hydrogen into helium through nuclear fusion, releasing vast amounts of energy that travels to Earth as light, heat, and radiation.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
@@ -230,7 +228,7 @@
             </video>
         </div>
 
-        <h2>☿ Mercury</h2>
+        <h2>Mercury</h2>
         <p>Mercury is the smallest planet in our solar system and the closest to the Sun. It has extreme temperature variations, with daytime temperatures reaching 427°C (800°F) and nighttime dropping to -173°C (-280°F). Mercury has no atmosphere to retain heat, and its surface is covered in craters similar to the Moon. It orbits the Sun every 88 Earth days, making it the fastest planet in our solar system.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
             <video controls style="display: block; background-color: #000; width: 100%; height: auto;">
@@ -239,7 +237,7 @@
             </video>
         </div>
 
-        <h2>♀ Venus</h2>
+        <h2>Venus</h2>
 
         <p>Venus is the second planet from the Sun and is often called Earth's "sister planet" due to their similar sizes and masses. However, Venus is a harsh and inhospitable world. It has the hottest surface of any planet in our solar system, with temperatures reaching 465°C (869°F), hot enough to melt lead.</p>
         <p>Venus has a thick atmosphere composed primarily of carbon dioxide with clouds of sulfuric acid, creating a runaway greenhouse effect. The atmospheric pressure on Venus is 92 times greater than on Earth, equivalent to being 3,000 meters deep in the ocean. Uniquely, Venus rotates backwards (retrograde rotation) and rotates so slowly that its day is longer than its year. It is the only planet that rotates from east to west when viewed from above the North Pole.</p>
@@ -250,7 +248,7 @@
             </video>
         </div>
 
-        <h2>⊕ Earth</h2>
+        <h2>Earth</h2>
         <p>Earth is the third planet from the Sun and the only known planet in the universe to harbor life. It has a diverse biosphere with liquid water covering about 71% of its surface. Earth's atmosphere is composed mainly of nitrogen and oxygen, and it has a protective magnetic field that shields it from harmful solar radiation. Our planet takes 365.25 days to orbit the Sun and rotates on its axis every 24 hours, creating day and night cycles.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
             <video controls style="display: block; background-color: #000; width: 100%; height: auto;">
@@ -259,7 +257,7 @@
             </video>
         </div>
 
-        <h2>☾ Moon</h2>
+        <h2>Moon</h2>
         <p>The Moon is Earth's only natural satellite and has a major influence on our planet's tides and axial stability. It is covered in a dusty, rocky surface and has phases that change as it orbits Earth every 27.3 days. The Moon has no atmosphere, so temperatures vary widely between day and night.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
             <video controls style="display: block; background-color: #000; width: 100%; height: auto;">
@@ -268,7 +266,7 @@
             </video>
         </div>
 
-        <h2>♂ Mars</h2>
+        <h2>Mars</h2>
         <p>Mars is the fourth planet from the Sun and is often called the Red Planet because of its iron oxide-rich soil. Mars has the largest volcano in the solar system, Olympus Mons, and evidence suggests it once had flowing water on its surface.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
             <video controls style="display: block; background-color: #000; width: 100%; height: auto;">
@@ -277,7 +275,7 @@
             </video>
         </div>
 
-        <h2>♃ Jupiter</h2>
+        <h2>Jupiter</h2>
         <p>Jupiter is the fifth planet from the Sun and the largest planet in our solar system. This gas giant is more than 11 times wider than Earth and has a mass greater than all the other planets combined. Jupiter's most distinctive feature is the Great Red Spot, a storm system larger than Earth that has been raging for at least 400 years. The planet has a complex system of bands and zones, which are clouds of different compositions moving at different speeds. Jupiter has at least 79 known moons, including the four large Galilean moons: Io, Europa, Ganymede, and Callisto.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
             <video controls style="display: block; background-color: #000; width: 100%; height: auto;">
@@ -286,7 +284,7 @@
             </video>
         </div>
 
-        <h2>♄ Saturn</h2>
+        <h2>Saturn</h2>
         <p>Saturn is the sixth planet from the Sun and is famous for its spectacular ring system. These rings are composed of countless particles of ice and rock, ranging in size from dust grains to house-sized chunks. The rings extend hundreds of thousands of kilometers from the planet but are surprisingly thin, with a thickness of only about 20 meters on average. Saturn is the second-largest planet in our solar system and is a gas giant composed primarily of hydrogen and helium. Despite being less dense than water, Saturn is a massive planet with at least 82 known moons, including Titan, which has a thick atmosphere and liquid methane lakes on its surface.</p>
         <div style="max-width: 800px; margin: 40px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); border: 1px solid #3a6aaa; background-color: #0a0e27;">
             <video controls style="display: block; background-color: #000; width: 100%; height: auto;">
