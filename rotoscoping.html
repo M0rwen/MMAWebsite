@@ -160,6 +160,63 @@
             height: 450px;
             border: none;
         }
+        .video-container.small iframe {
+            height: 300px;
+        }
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .video-tile {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.12) 0%, rgba(255, 11, 85, 0.1) 100%);
+            border: 2px solid rgba(255, 11, 85, 0.35);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 222, 222, 0.12), 0 0 25px rgba(255, 11, 85, 0.15);
+        }
+        .video-tile:hover {
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.2) 0%, rgba(255, 11, 85, 0.18) 100%);
+            transform: translateY(-8px);
+            border-color: rgba(255, 11, 85, 0.6);
+            box-shadow: 0 18px 48px rgba(255, 11, 85, 0.35), inset 0 1px 0 rgba(255, 222, 222, 0.2), 0 0 35px rgba(255, 11, 85, 0.25);
+        }
+        .video-tile h3 {
+            font-size: 1.4em;
+            color: #FFDEDE;
+            padding: 20px 20px 10px 20px;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 6px rgba(255, 11, 85, 0.3);
+        }
+        .video-tile .video-container {
+            max-width: 100%;
+            margin: 10px;
+            flex: 1;
+        }
+        .video-tile .video-container iframe {
+            height: 250px;
+        }
+        .final-output-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 11, 85, 0.2);
+            border: 3px solid rgba(255, 11, 85, 0.5);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.15) 0%, rgba(255, 11, 85, 0.1) 100%);
+        }
+        .final-output-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -191,47 +248,69 @@
 
         <p>All credits to the owner. Disclaimer: this video is used for educational purposes only. The footage used is rotoscoped and transformed as part of a learning activity.</p>
 
-        <h2>Week 2 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/zGA9GxibEn4" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+        <h2>FINAL OUTPUT</h2>
+        <div class="final-output-container">
+            <iframe src="https://www.youtube.com/embed/XlgahSuUzbQ" title="Featured Video" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
 
-        <h2>Week 3 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/XkveNNUrHgk" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+        <h2>Weekly Progress</h2>
+        <p>Here's my progression through the rotoscoping project from Week 2 to Week 10:</p>
+        <div class="videos-grid">
+            <div class="video-tile">
+                <h3>Week 2 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/zGA9GxibEn4" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Week 4 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/4fe-RlVUdwA" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+            <div class="video-tile">
+                <h3>Week 3 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/XkveNNUrHgk" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Week 5 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/hE79q0XllFg" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+            <div class="video-tile">
+                <h3>Week 4 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/4fe-RlVUdwA" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Week 6 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/F-nzsITmpTw" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+            <div class="video-tile">
+                <h3>Week 5 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/hE79q0XllFg" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Week 7 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Km-nBMu5pvs" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+            <div class="video-tile">
+                <h3>Week 6 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/F-nzsITmpTw" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Week 9 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/4DbMlcBBWx4" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+            <div class="video-tile">
+                <h3>Week 7 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/Km-nBMu5pvs" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Week 10 Progress</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/p9qiXPLpxgU" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
-        </div>
+            <div class="video-tile">
+                <h3>Week 9 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/4DbMlcBBWx4" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
 
-        <h2>Reference Video</h2>
+            <div class="video-tile">
+                <h3>Week 10 Progress</h3>
+                <div class="video-container small">
+                    <iframe src="https://www.youtube.com/embed/p9qiXPLpxgU" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/tuD2wTFNRjo" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
         </div>
