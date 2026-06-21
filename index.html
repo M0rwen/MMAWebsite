@@ -69,15 +69,15 @@
             left: 20px;
             top: 20px;
             width: 240px;
-            background: rgba(0, 10, 20, 0.95);
-            border: 2px solid rgba(255, 11, 85, 0.8);
+            background: rgba(0, 10, 20, 0.98);
+            border: 1px solid rgba(255, 11, 85, 0.5);
             border-radius: 0;
             padding: 20px;
             z-index: 100;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            box-shadow: 0 0 20px rgba(255, 11, 85, 0.3), inset 0 0 20px rgba(255, 11, 85, 0.05);
+            gap: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
         }
 
         nav a {
@@ -85,14 +85,15 @@
             background: transparent;
             color: #FFDEDE;
             text-decoration: none;
-            border: 1px solid rgba(255, 11, 85, 0.6);
-            border-radius: 0;
-            font-size: 12px;
+            border: 1px solid rgba(255, 11, 85, 0.4);
+            border-bottom: 1px solid rgba(255, 11, 85, 0.2);
+            border-radius: 4px;
+            font-size: 11px;
             font-weight: 700;
-            transition: all 0.3s ease;
+            transition: border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: inset 0 0 10px rgba(255, 11, 85, 0.1);
+            letter-spacing: 1.5px;
+            box-shadow: none;
             display: block;
             text-align: center;
             position: relative;
@@ -100,32 +101,25 @@
         }
 
         nav a::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 11, 85, 0.2);
-            transition: left 0.4s ease;
-            z-index: -1;
+            display: none;
         }
 
         nav a:hover::after {
-            left: 0;
+            display: none;
         }
 
         nav a:hover {
             color: #FFDEDE;
-            border-color: rgba(255, 11, 85, 1);
-            box-shadow: inset 0 0 10px rgba(255, 11, 85, 0.3), 0 0 15px rgba(255, 11, 85, 0.4);
+            border-color: rgba(255, 11, 85, 0.8);
+            background-color: rgba(255, 11, 85, 0.08);
+            box-shadow: none;
         }
 
         nav a.active {
-            background: rgba(255, 11, 85, 0.15);
+            background-color: rgba(255, 11, 85, 0.12);
             color: #FFDEDE;
-            border-color: rgba(255, 11, 85, 1);
-            box-shadow: inset 0 0 10px rgba(255, 11, 85, 0.4), 0 0 20px rgba(255, 11, 85, 0.5);
+            border-color: rgba(255, 11, 85, 0.9);
+            box-shadow: inset 0 0 4px rgba(255, 11, 85, 0.15);
             position: relative;
         }
 
@@ -143,11 +137,17 @@
             font-size: 3.5em;
             margin-bottom: 25px;
             color: #FFDEDE;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             font-weight: 900;
-            text-shadow: 0 0 20px rgba(255, 11, 85, 0.8);
-            border-bottom: 3px solid #FF0B55;
+            text-shadow: none;
+            border-bottom: 1px solid rgba(255, 11, 85, 0.3);
             padding-bottom: 15px;
+        }
+        
+        h1::before {
+            content: '// ';
+            color: rgba(255, 11, 85, 0.6);
+            letter-spacing: 2px;
         }
 
         h2 {
@@ -155,14 +155,21 @@
             margin-top: 60px;
             margin-bottom: 25px;
             color: #FFDEDE;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             font-weight: 900;
             text-transform: uppercase;
-            border-left: 4px solid #FF0B55;
-            border-bottom: 2px solid rgba(255, 11, 85, 0.5);
-            padding: 15px 0 15px 20px;
+            border-left: 1px solid rgba(255, 11, 85, 0.4);
+            border-bottom: 1px solid rgba(255, 11, 85, 0.2);
+            padding: 15px 0 15px 15px;
             position: relative;
-            text-shadow: 0 0 10px rgba(255, 11, 85, 0.5);
+            text-shadow: none;
+            font-size: 1.5em;
+        }
+        
+        h2::before {
+            content: '\2192 ';
+            color: rgba(255, 11, 85, 0.5);
+            letter-spacing: 2px;
         }
 
         p {
@@ -171,12 +178,12 @@
             margin: 20px 0;
             color: #FFDEDE;
             font-size: 16px;
-            transition: all 0.3s ease;
+            transition: color 0.2s ease, opacity 0.2s ease;
         }
 
         p:hover {
-            color: #FF0B55;
-            transform: translateX(5px);
+            color: rgba(255, 11, 85, 0.8);
+            opacity: 0.9;
         }
 
         ul {
@@ -189,12 +196,12 @@
         ul li {
             margin: 15px 0;
             padding: 18px 20px;
-            background: rgba(0, 10, 20, 0.5);
-            border-left: 4px solid #FF0B55;
-            border-bottom: 1px solid rgba(255, 11, 85, 0.3);
-            border-radius: 0;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 0 10px rgba(255, 11, 85, 0.05);
+            background: rgba(0, 10, 20, 0.3);
+            border-left: 1px solid rgba(255, 11, 85, 0.3);
+            border-bottom: 1px solid rgba(255, 11, 85, 0.15);
+            border-radius: 4px;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
             position: relative;
             color: #FFDEDE;
             font-size: 0.95em;
@@ -207,16 +214,19 @@
             left: 0;
             top: 0;
             bottom: 0;
-            width: 4px;
-            background: #FF0B55;
-            transition: all 0.3s ease;
+            width: 1px;
+            background: rgba(255, 11, 85, 0.3);
+            transition: background-color 0.2s ease;
         }
 
         ul li:hover {
-            background: rgba(0, 10, 20, 0.7);
-            border-left-color: #FFDEDE;
-            box-shadow: inset 0 0 10px rgba(255, 11, 85, 0.1), 0 0 15px rgba(255, 11, 85, 0.2);
-            transform: translateX(5px);
+            background: rgba(0, 10, 20, 0.4);
+            border-left-color: rgba(255, 11, 85, 0.6);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+        }
+        
+        ul li:hover::before {
+            background: rgba(255, 11, 85, 0.6);
         }
 
         .button {
@@ -226,45 +236,37 @@
             background: transparent;
             color: #FFDEDE;
             text-decoration: none;
-            border: 2px solid #FF0B55;
-            border-radius: 0;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 11, 85, 0.6);
+            border-radius: 4px;
+            transition: border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
             cursor: pointer;
-            font-size: 13px;
-            font-weight: 900;
+            font-size: 12px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.1), 0 0 15px rgba(255, 11, 85, 0.3);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             font-family: 'Courier New', monospace;
         }
 
         .button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 11, 85, 0.2);
-            transition: left 0.3s ease;
-            z-index: -1;
+            display: none;
         }
 
         .button:hover::after {
-            left: 0;
+            display: none;
         }
 
         .button:hover {
             color: #FFDEDE;
-            border-color: #FFDEDE;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.2), 0 0 25px rgba(255, 11, 85, 0.6);
-            transform: translateY(-2px);
+            border-color: rgba(255, 11, 85, 0.9);
+            background-color: rgba(255, 11, 85, 0.1);
+            box-shadow: 0 2px 8px rgba(255, 11, 85, 0.2);
         }
 
         .button:active {
-            transform: translateY(0);
+            opacity: 0.9;
         }
 
         .projects-grid {
@@ -280,18 +282,18 @@
             gap: 30px;
             margin: 60px 0;
             align-items: start;
-            background: rgba(0, 10, 20, 0.5);
-            border: 2px solid #FF0B55;
-            border-radius: 0;
+            background: rgba(0, 10, 20, 0.3);
+            border: 1px solid rgba(255, 11, 85, 0.25);
+            border-radius: 4px;
             padding: 40px;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 0 20px rgba(255, 11, 85, 0.1), 0 0 30px rgba(255, 11, 85, 0.2);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         .project-panel:hover {
-            background: rgba(0, 10, 20, 0.7);
-            border-color: #FFDEDE;
-            box-shadow: inset 0 0 20px rgba(255, 11, 85, 0.15), 0 0 40px rgba(255, 11, 85, 0.4);
+            background: rgba(0, 10, 20, 0.4);
+            border-color: rgba(255, 11, 85, 0.4);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .project-panel-content {
@@ -306,7 +308,7 @@
             color: #FFDEDE;
             margin: 0;
             letter-spacing: 1px;
-            text-shadow: 0 2px 8px rgba(255, 11, 85, 0.3);
+            text-shadow: none;
         }
 
         .project-panel-content p {
@@ -318,11 +320,11 @@
 
         .project-panel-media {
             width: 100%;
-            border-radius: 0;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.1), 0 0 25px rgba(255, 11, 85, 0.2);
-            border: 2px solid rgba(255, 11, 85, 0.5);
-            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 11, 85, 0.2);
+            background: rgba(0, 0, 0, 0.3);
         }
 
         .project-panel-media img,
@@ -368,21 +370,20 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background: rgba(0, 10, 20, 0.5);
-            border: 2px solid rgba(255, 11, 85, 0.5);
-            border-radius: 0;
+            background: rgba(0, 10, 20, 0.3);
+            border: 1px solid rgba(255, 11, 85, 0.2);
+            border-radius: 4px;
             padding: 30px;
-            transition: all 0.3s ease;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.1), 0 0 20px rgba(255, 11, 85, 0.15);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
             position: relative;
             overflow: hidden;
         }
 
         .project-card:hover {
-            background: rgba(0, 10, 20, 0.7);
-            transform: translateY(-5px);
-            border-color: rgba(255, 11, 85, 0.8);
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.15), 0 0 30px rgba(255, 11, 85, 0.3);
+            background: rgba(0, 10, 20, 0.4);
+            border-color: rgba(255, 11, 85, 0.4);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         .project-card h3 {
@@ -390,7 +391,7 @@
             color: #FFDEDE;
             margin-bottom: 15px;
             letter-spacing: 1px;
-            text-shadow: 0 2px 6px rgba(255, 11, 85, 0.3);
+            text-shadow: none;
         }
 
         .project-card p {
@@ -412,22 +413,23 @@
             color: #FFDEDE;
             margin-top: 100px;
             padding: 30px;
-            border: 2px solid #FF0B55;
-            border-radius: 0;
-            background: rgba(0, 10, 20, 0.5);
+            border: 1px solid rgba(255, 11, 85, 0.3);
+            border-radius: 4px;
+            background: rgba(0, 10, 20, 0.3);
             line-height: 1.8;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.1), 0 0 20px rgba(255, 11, 85, 0.15);
-            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .disclaimer:hover {
-            border-color: #FFDEDE;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.15), 0 0 30px rgba(255, 11, 85, 0.3);
+            border-color: rgba(255, 11, 85, 0.5);
+            background-color: rgba(0, 10, 20, 0.4);
         }
 
         .disclaimer strong {
-            color: #FF0B55;
+            color: rgba(255, 11, 85, 0.9);
             letter-spacing: 1px;
+            font-weight: 700;
         }
 
         .hero-text {
@@ -440,10 +442,10 @@
         }
 
         .accent {
-            color: #FF0B55;
-            font-weight: 900;
+            color: rgba(255, 11, 85, 0.9);
+            font-weight: 700;
             letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(255, 11, 85, 0.6);
+            text-shadow: none;
         }
 
         .video-container {
@@ -451,11 +453,11 @@
             width: 100%;
             max-width: 800px;
             margin: 40px 0;
-            border-radius: 0;
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: inset 0 0 15px rgba(255, 11, 85, 0.1), 0 0 25px rgba(255, 11, 85, 0.2);
-            border: 2px solid rgba(255, 11, 85, 0.5);
-            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 11, 85, 0.25);
+            background: rgba(0, 0, 0, 0.3);
         }
 
         .video-container iframe {
