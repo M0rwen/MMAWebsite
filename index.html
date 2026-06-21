@@ -383,6 +383,24 @@
             text-shadow: 0 2px 6px rgba(255, 11, 85, 0.3);
         }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 40px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 11, 85, 0.2);
+            border: 2px solid rgba(255, 11, 85, 0.35);
+            background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
         @media (max-width: 768px) {
             nav {
                 width: 200px;
@@ -420,16 +438,8 @@
         <div id="home" class="tab-content active">
             <h1>Yunice's Portfolio</h1>
             
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/XlgahSuUzbQ" title="Featured Video" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-            </div>
-            
             <p class="hero-text">Welcome to my digital creative space. I'm a student in the <span class="accent">Multimedia and Arts course</span>, and this portfolio showcases my passion for 3D modeling, animation, and digital design.</p>
             <p class="hero-text">Explore my professional work and creative projects that demonstrate my skills in <span class="accent">Blender 3D modeling</span>, <span class="accent">advanced animation techniques</span>, and <span class="accent">rotoscope artistry</span>.</p>
-
-            <div style="max-width: 800px; margin: 40px 0; border-radius: 10px; overflow: hidden; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 11, 85, 0.2); border: 2px solid rgba(255, 11, 85, 0.35); background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);">
-                <img src="videos/homepage.gif" alt="Homepage" style="display: block; width: 100%; height: auto;">
-            </div>
 
             <h2>Featured Projects</h2>
             <p>Discover my latest work from the Multimedia and Arts course, featuring cutting-edge 3D modeling and advanced animation techniques.</p>
@@ -446,6 +456,14 @@
                     <p>Advanced rotoscoping demonstrations using Flipaclip and Adobe Premiere Pro. Frame-by-frame animation work showcasing traditional animation techniques in modern digital workflows.</p>
                     <a href="rotoscoping.html" class="button">View Process</a>
                 </div>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/XlgahSuUzbQ" title="Featured Video" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <div style="max-width: 800px; margin: 40px 0; border-radius: 10px; overflow: hidden; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 11, 85, 0.2); border: 2px solid rgba(255, 11, 85, 0.35); background: linear-gradient(135deg, rgba(207, 15, 71, 0.1) 0%, rgba(255, 11, 85, 0.08) 100%);">
+                <img src="videos/homepage.gif" alt="Homepage" style="display: block; width: 100%; height: auto;">
             </div>
 
             <h2>About This Portfolio</h2>
